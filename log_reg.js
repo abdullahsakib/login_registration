@@ -31,7 +31,7 @@ function register() {
     
     alert("Registration successfull!! You can now login")
 
-    document.getElementById('regFullname').value ='';
+    document.getElementById('regFullName').value ='';
     document.getElementById('regEmail').value ='';
     document.getElementById('regPassword').value = '';
     
@@ -60,8 +60,13 @@ function login() {
     const perseUser=JSON.parse(user)
 
     if (InputPassword!=perseUser.password) {
-        alert("inocrrect passwors")
+        alert("inocrrect password")
         return;
     }
+
+    alert("login successful ! welcome "+perseUser.fullname)
+
+    document.getElementById('loginEmail')='';
+    document.getElementById('loginPassword')='';
 
 }
